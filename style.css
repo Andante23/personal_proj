@@ -16,11 +16,11 @@
 /*  movieRight(영화검색창) 전체 */
 .movieRight{
 
-    margin-left: 1700px;
+    margin-left: 900px;
 
     /* 영화카드 게시판이랑 아래 간격을 두어야 함  */
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
     background-color: gainsboro;
     border-radius: 10px;
@@ -44,6 +44,8 @@
 
     
     color: gray;
+
+    
 }
 
 
