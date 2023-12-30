@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="app.js"></script>
+
+    <!-- 폰트어썸 (일부 아이콘은 유료지만 , 기본 제공은 무료 )  -->
+    <script src="https://kit.fontawesome.com/f57cfcf36f.js" crossorigin="anonymous"></script>
+   
+     <script src="apikey.js"></script>
+    <!-- 구글폰트 14 ~ 16 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200&display=swap" rel="stylesheet">
+ 
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- 단테의 영화 소개 사이트 상단 movieTop -->
+    <header id="movieTop">
+        <h1 class="intro">단테네 영화소개집</h1>
+    </header>
+
+
+    
+
+
+
+
+
+    <!-- 제가 소개하는 영화들을 검색할 수 있는 검색창 movieSearch -->
+    <div class="movieRight">
+        <input type="text" placeholder="영화제목을 입력해주세요" id="movieSearch" class="movieSearchBar">
+        
+        <!-- 영화제목을 입력하고 검색버튼을 클릭하면  -->
+
+        <button class="movieSearchbtn" onclick="searchPlay()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        
+        </button>
+    </div>
+    
+
+
+
+
+    <!-- 검색하면  보이는 화면단 movieListView -->
+
+    <div id="movieListView" class="movieMiddle">    
+     <!-- 
+        javascript DOM 을 통해  영화 소개 카드 레이아웃(HTML) 을 가져와서 
+        뿌려준다.
+      -->
+    </div>
+
+
+    <!-- 홈페이지 하단 -->
+    <footer id="movieBottom">
+        <!-- 제목 -->
+        <div class="mBottomleft">
+            <h1 class="mBottomleft__title">
+                단테네 영화소개집
+            </h1>
+        </div>
+
+
+        <!-- 메뉴 -->
+        <ul class="mBottomright">
+            
+            <!-- icon + 이메일 -->
+            <li class="mBottomright__list">
+                <i class="fa-regular fa-envelope"></i><small class="list__mail">
+                    andante1104@naver.com
+                </small>
+            </li>
+
+            <!-- icon + 주소 -->
+            <li class="mBottomright__list">
+                <i class="fa-solid fa-location-dot"></i> <small class="list__addr">
+                     경기도 시흥시 목감초등길4 
+                </small>
+            </li>
+        </ul>
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
