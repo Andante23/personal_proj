@@ -1,0 +1,346 @@
+/* css 공통 골격인 style.css 스크립트를 import를 통해 가져왔습니다.  */
+@import url(style.css);
+
+
+/* 
+   모바일 미디어 쿼리를 모아났습니다.
+   세로모드이며 최대너비를 기준으로 하였습니다.
+*/
+
+
+
+/*  
+   Galaxy Note 9 / 갤럭시 노트 9 
+
+   Galaxy Note 10 plus / 갤럭시 노트 10+
+
+   Galaxy S20 / 갤럭시 s20 
+
+   Galaxy Z Flip 3 / 갤럭시 z플립 3
+
+*/
+
+@media screen and (max-width : 412px ) {
+    
+
+    /* 사이트 제목 */
+    #movieTop .intro {
+
+        padding-left: 55px;
+        font-size: 26px;
+    }
+
+    /* 검색바 */
+    
+    .movieRight {
+        margin-left: 40px;
+    }
+    
+    
+    /* 
+      이미지는 비활성화 
+      모바일에는  영화제목 , 평점 , 내용 
+    */
+    #movieListView > .movieCard  > .mvImg {
+       
+        display: none;
+    }
+
+
+
+    #movieListView {
+        display: flex;
+        flex-direction: column;
+      
+
+
+    }
+
+    #movieListView > .movieCard{
+     /* 검색바와 균형 잡기 */
+     margin-left: 36px;
+     width: 280px;
+     height: 150px;
+
+     
+     border-radius: 1px;
+     box-shadow: 1px 1px 2px 1px gray;
+    }
+     
+ 
+    #movieListView > .movieCard >.movieCarte {
+        width: 270px;
+        height: 40px;
+        
+        border-radius: 1px;
+        margin-bottom: 12px;
+
+        margin-top: 0px;
+    }
+
+    #movieListView > .movieCard >.movieCarte > .mvTitle {
+        font-size: 10px;
+    }
+
+    #movieListView > .movieCard > .mvParam{
+        
+       font-size: 6px;
+       padding-bottom: 2px;
+    }
+
+    .movieRight.movieSearchbtn:hover {
+        color: gray;
+   }
+
+
+    #movieBottom  {
+       align-items: center;
+       font-size: 10px;
+    }
+
+    #movieBottom > .mBottomleft > .mBottomleft__title {
+        font-size: 20px;
+    }
+
+    
+    .movieRight.movieSearchbtn:hover {
+        color: gray;
+   }
+
+
+
+
+}
+
+
+
+/*  iPhone se(1세대)    */
+/* Galaxy Z Fold       */
+@media screen and (max-width : 320px){
+
+    #movieListView > .movieCard{
+        margin-left:  6px;
+    }
+
+
+    .movieRight {
+        margin: 6px;
+    }
+
+
+    #movieBottom > .mBottomleft > .mBottomleft__title {
+        font-size: 12px;
+        padding-left: 4px;
+    }
+
+
+
+    }
+
+
+/* iPhone 기본모델(mini, se 2세대 포함) */
+@media screen and (max-width : 375px){
+
+   
+
+
+}
+
+
+/* iPhone 플러스 모델(iPhone XX Plus) * /
+/* Galaxy Z Flip 3 / 갤럭시 z 플립 3 */
+@media screen and (max-width : 414px ) {
+    
+
+    /* 사이트 제목 */
+    #movieTop .intro {
+
+        padding-left: 55px;
+        font-size: 26px;
+    }
+
+    /* 검색바 */
+    
+    .movieRight {
+        margin-left: 40px;
+    }
+    
+    
+    /* 
+      이미지는 비활성화 
+      모바일에는  영화제목 , 평점 , 내용 
+    */
+    #movieListView > .movieCard  > .mvImg {
+       
+        display: none;
+    }
+
+
+
+    #movieListView {
+        display: flex;
+        flex-direction: column;
+      
+
+
+    }
+
+    #movieListView > .movieCard{
+     /* 검색바와 균형 잡기 */
+     margin-left: 36px;
+     width: 280px;
+     height: 150px;
+
+     
+     border-radius: 1px;
+     box-shadow: 1px 1px 2px 1px gray;
+    }
+     
+ 
+    #movieListView > .movieCard >.movieCarte {
+        width: 270px;
+        height: 40px;
+        
+        border-radius: 1px;
+        margin-bottom: 12px;
+
+        margin-top: 0px;
+    }
+
+    #movieListView > .movieCard >.movieCarte > .mvTitle {
+        font-size: 10px;
+    }
+
+    #movieListView > .movieCard > .mvParam{
+        
+       font-size: 6px;
+       padding-bottom: 2px;
+    }
+
+    .movieRight.movieSearchbtn:hover {
+        color: gray;
+   }
+
+
+    #movieBottom  {
+       align-items: center;
+       font-size: 10px;
+    }
+
+    #movieBottom > .mBottomleft > .mBottomleft__title {
+        font-size: 20px;
+    }
+
+    
+    .movieRight.movieSearchbtn:hover {
+        color: gray;
+   }
+
+
+
+
+}
+
+
+
+
+
+
+
+/*  갤럭시 z폴드 5G  */
+@media screen and (max-width : 586px ) {
+    
+
+    /* 사이트 제목 */
+    #movieTop .intro {
+
+        padding-left: 0px;
+        font-size: 26px;
+    }
+
+    /* 검색바 */
+    
+    .movieRight {
+        margin-left: 280px;
+    }
+    
+    
+    /* 
+      이미지는 비활성화 
+      모바일에는  영화제목 , 평점 , 내용 
+    */
+    #movieListView > .movieCard  > .mvImg {
+       
+        display: none;
+    }
+
+
+
+    #movieListView {
+        display: flex;
+        flex-direction: column;
+      
+
+
+    }
+
+    #movieListView > .movieCard{
+     /* 검색바와 균형 잡기 */
+     margin-left: 36px;
+     width: 500px;
+     height: 150px;
+
+     
+     border-radius: 1px;
+     box-shadow: 1px 1px 2px 1px gray;
+    }
+     
+ 
+    #movieListView > .movieCard >.movieCarte {
+        width: 490px;
+        height: 30px;
+        
+        border-radius: 1px;
+        margin-bottom: 12px;
+
+        margin-top: 0px;
+    }
+
+    #movieListView > .movieCard >.movieCarte > .mvTitle {
+        font-size: 20px;
+    }
+
+    #movieListView > .movieCard > .mvParam{
+        
+       font-size: 9px;
+       padding-bottom: 2px;
+    }
+
+    .movieRight.movieSearchbtn:hover {
+        color: gray;
+   }
+
+
+    #movieBottom  {
+       align-items: center;
+       font-size: 10px;
+    }
+
+    #movieBottom > .mBottomleft > .mBottomleft__title {
+        font-size: 20px;
+    }
+
+    
+    .movieRight.movieSearchbtn:hover {
+        color: gray;
+   }
+
+
+
+
+}
+
+
+
+
+
