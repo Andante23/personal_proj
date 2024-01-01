@@ -48,10 +48,8 @@
     
 }
 
-
-
-
-.movieSearchbtn {
+/* movieSearchbtn(영화검색버튼) */
+.movieRight .movieSearchbtn {
     margin-left: 15px;
     color: white;
     outline: none;
@@ -59,7 +57,7 @@
     background-color: transparent;
 }
 
-.movieSearchbtn:hover {
+.movieRight.movieSearchbtn:hover {
      color: gray;
 }
 
@@ -69,7 +67,6 @@
 
 
 /* movieListView(영화카드 게시판)이자 영화 홈페이지 중단 */
-
 #movieListView {
     /* 
       display를 grid로 하고 
@@ -138,7 +135,7 @@
 
 
 
-/* 영화 홈페이지 하단 */
+/* movieBottom(영화 홈페이지 하단)  */
 #movieBottom {
     display: flex;
     align-items: center;
@@ -153,8 +150,6 @@
     margin-right: 15px;
     padding: 3px;
 }
-
-
 
 
 

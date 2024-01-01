@@ -42,6 +42,8 @@ const apiKey = config.apiKey;
 <div class="movieCarte">
     <p class="mvTitle"  id="mv__title">${response.original_title}</p>
     <span class="mvRate"><small id="mv__Rate">${response.vote_average}</small></span>
+    
+    
    
  </div>   
 
