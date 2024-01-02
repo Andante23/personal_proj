@@ -6,7 +6,7 @@ const options = {
     }
 };
 // API는 변함이 없으므로 상수로 고정
-const apiKey = config.apiKey;
+const apiKey = config.apikey;
 // movieIds 는  일단 존재하는 이미지 로 해서 붙여줌 
   const movieIds = [2,6,8,12,20];
   movieIds.forEach(movieId => {
