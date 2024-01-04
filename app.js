@@ -1,3 +1,4 @@
+//
 'use strict';
 
 // options는 tmdb api 명세의 기본 틀에 존재하기에 필요합니다. 
@@ -13,12 +14,12 @@ const options = {
 
 // API는 변함이 없으므로 상수로 고정
 const apiKey = config.tmdbApi;
-// movieIds 는  일단 존재하는 이미지 로 해서 붙여줌 
-  
+
+// movieIds는  response 콘솔을 찍어서 나온 id로 함   
 const movieIds = [2,5,6,8,11,13,15,17,21];
 
-  // movieIds를 반복으로 받으면서 카드를 붙여주는 과정을 반복한다.
-  movieIds.forEach(movieId => {
+// movieIds를 반복으로 받으면서 카드를 붙여주는 과정을 반복한다.
+movieIds.forEach(movieId => {
   
     // 자바스크립트에서 호이스팅이 동작해서 다음과 같은 경우에는 
     // 함수 movieCardBlock 정의부를 위로 끌어당겨 해석한다. 
@@ -70,6 +71,7 @@ const movieIds = [2,5,6,8,11,13,15,17,21];
 
     
         })
+        
         // 크롬 브라우저 개발자 도구 console 창에 에러 출력 
         .catch(
             err => console.error(err)   
@@ -86,10 +88,8 @@ const movieIds = [2,5,6,8,11,13,15,17,21];
     );
 
 
-
-
-    // 사용자가 검색어를 입력하면 그에 따라 카드를 보여주는 함수 searchPlay 함수
-    const searchPlay = () => {
+// 사용자가 검색어를 입력하면 그에 따라 카드를 보여주는 함수 searchPlay 함수
+const searchPlay = () => {
 
         // 사용자로부터 입력받은 검색어 값(value)에 접근
       const searchInp = document.getElementById('movieSearch').value;
