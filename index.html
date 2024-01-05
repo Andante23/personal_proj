@@ -12,12 +12,12 @@
     -->
     <meta name="description" content="환영합니다.단테가 선정한 영화를 소개해주는 사이트입니다.">
     <meta name="keywords" content="단테네 , 단테네 영화소개집">
+    <script defer src="app.js"></script>
 
      <script src="apikey.js"></script>
-    <script type="module" src="app.js"></script>
-
+     
       
-   
+     
     <link rel="stylesheet" href="style.css">
 
     <!-- 폰트어썸 (일부 아이콘은 유료지만 , 기본 제공은 무료 )  -->
@@ -52,7 +52,7 @@
         
         <!-- 영화제목을 입력하고 검색버튼을 클릭하면  -->
 
-        <button class="movieSearchbtn" onclick="searchPlay()">
+        <button class="movieSearchbtn"  id="searchBtn" onclick="searchPlay()" >
             <i class="fa-solid fa-magnifying-glass"></i>
         
         </button>

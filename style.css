@@ -1,51 +1,31 @@
-
-
+/* :root{} */
 
 
 
 /* 선택자를 사용하여  문서 모두에 영향을 끼치게 함 */
-* {
-    
-    font-family: 'Noto Sans KR', sans-serif;
+* {    
+    font-family:'Noto Sans KR', sans-serif;
 }
-
-
-
 
 
 /*  movieRight(영화검색창) 전체 */
 .movieRight{
-
-    margin-left: 1500px;
-
-    /* 영화카드 게시판이랑 아래 간격을 두어야 함  */
-    margin-top: 30px;
-    margin-bottom: 30px;
-
+    margin :30px 0px 30px 1500px;
     background-color: gainsboro;
     border-radius: 10px;
     width: 275px;
-   
 }
 
 /* movieSearchBar(영화검색바)  */
 .movieRight .movieSearchBar {
-    
     outline: none;
     width: 220px;
     height: 40px;
-    font-size: 14px;
-      
-   border: none;
-    
+    font-size: 14px;  
+    border: none;
     border-radius: 20px;
-    
-    background-color: gainsboro;
-
-    
-    color: gray;
-
-    
+    background-color: gainsboro;    
+    color:  gray;
 }
 
 /* movieSearchbtn(영화검색버튼) */
@@ -57,8 +37,9 @@
     background-color: transparent;
 }
 
-.movieRight.movieSearchbtn:hover {
+.movieRight .movieSearchbtn:hover {
      color: gray;
+     cursor: pointer;
 }
 
 

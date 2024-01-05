@@ -2,8 +2,6 @@
 'use strict';
 
 
-
-
 // options는 tmdb api 명세의 기본 틀에 존재하기에 필요합니다. 
 const options = {
     method: 'GET',  
@@ -75,33 +73,58 @@ movieIds.forEach(movieId => {
     });
 
 
+
+
+
 // 사용자가 검색어를 입력하면 그에 따라 카드를 보여주는 함수 searchPlay 함수
 const searchPlay = () => {
+  
+  // 사용자의 가상입력어를 저장하는 변수인 searchInput에  
+  //검색창에서 검색어가 보이는 부분인 movieSearch value를 할당합시다.
+  const searchInput = document.getElementById('movieSearch').value.toLowerCase(); 
 
-        // 사용자로부터 입력받은 검색어 값(value)에 접근
-      const searchInput = document.getElementById('movieSearch').value;
-      // 모든 영화 카드
-      const movieCards = document.querySelectorAll('.movieCard');
+ 
+  // movieCard 전체를 가져왔습니다.
+  const movieCards = document.querySelectorAll('.movieCard');
+
+
+
+  // typeof을 이용해서  movieCards가 객체이니 foreach문을 이용해서 반복합시다. 
+  movieCards.forEach(movieCard => {
+   
+      // 이것은 각각 카드들의 무비 이름을 가져오는 코드입니다.
+      const mv_Title = movieCard.querySelector('.mvTitle').innerText.toLowerCase();
+
       
+      // mdn사에서 정리해놓은 문자열 메서드인 include를 이용합시다. 
+    
 
       /*
-        1. 사용자에게 가상으로 검색어로 입력받는다.
-        2. includes(https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/includes) 메서드를 이용
-             사용자가 검색한 문자열인 searchInput이  영화 카드의 제목인 mv_Title에 포함되어 있는지 확인하는 과정을 하나로본다.
-             이 과정이  한번이 아닌 여러번 나오므로 반복문을 실행한다. 
+         mv_Title(영화제목) 에서 가상의 사용자가 검색한 searchInput을 찾으면  -> 영화카드가 표시되게 해주세요(block)
+         그것이 아니면 ->  영화카드를 표시하지 말하주세요(none)
       */
-      movieCards.forEach(movieCard => {
 
-        
+      // 추가적으로 mv_Title의 인풋 값과 searchInput 인풋값이 동일하기에  비교하기에 쉬움 
+      if(mv_Title.includes(searchInput))
+       {
+          movieCard.style.display = 'block'
+       }else{
+          movieCard.style.display = 'none';
+       }
+    
+    
+         
+  });
+};
 
-        // 영화카드내의 영화 이름 저장
-        const mv_Title = document.getElementById('mv__title').innerText;
-       
-        // 사용자가 검색한 문자열인 searchInput이  영화 카드의 제목인 mv_Title에 포함되어 있는지 확인하는 과정 ( 112 ~ 119 )
-        mv_Title.includes(searchInput) ?  movieCard.style.display = 'block' :  movieCard.style.display = 'none' ;
-     
-      });
-    }
+// searchBtn을 클릭하면  searchPlay함수를 동작시켜주세요 
+document.getElementById('searchBtn').addEventListener('click',searchPlay);
+
+
+  
+
+
+
 
 
 
