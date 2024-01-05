@@ -1,7 +1,7 @@
 
 'use strict';
 
-import config from "./src/config.js";
+
 
 
 // options는 tmdb api 명세의 기본 틀에 존재하기에 필요합니다. 
@@ -16,7 +16,7 @@ const options = {
 
 
 // API는 변함이 없으므로 상수로 고정
-const {tmdbApi} = config ;
+const apiKey = config.tmdbApi;
 
 // movieIds는  response 콘솔을 찍어서 나온 id로 함   
 const movieIds = [2,5,6,8,11,13,15,17,21];
@@ -24,13 +24,11 @@ const movieIds = [2,5,6,8,11,13,15,17,21];
 // movieIds를 반복으로 받으면서 카드를 붙여주는 과정을 반복한다.
 movieIds.forEach(movieId => {
   
-    // 자바스크립트에서 호이스팅이 동작해서 다음과 같은 경우에는 
-    // 함수 movieCardBlock 정의부를 위로 끌어당겨 해석한다. 
-    movieCardBlock(options);
+   
 
-    // 영화카드를 보이게 하는  movieCardBlock 함수 
+    // 영화카드를 보이게 하는  movieCardBlock 함수 정의합니다. 
     function movieCardBlock(options){
-        const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${tmdbApi}`;
+        const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`;
         
         // options는 tmdbAPI 명세에서 요구하기에 가져왔습니다. 
         fetch(url, options)
@@ -64,24 +62,17 @@ movieIds.forEach(movieId => {
 
        <p class="mvParam"  id="mv__param">${response.overview}</p> 
        </div>`;
-
-
-
-
-
-    }).catch(  // 크롬 브라우저 개발자 도구 console 창에 에러 출력 
-            err => console.error(err)   
+    }).catch( 
+            err => console.error(err)  // 크롬 브라우저 개발자 도구 console 창에 에러 출력 
             );
-    }
+    }  
 
-       
-    }
-   
-    
-    
-    
-    
-    );
+
+    // movieCardBlock 함수를 선언합니다. 
+    movieCardBlock(options);
+
+
+    });
 
 
 // 사용자가 검색어를 입력하면 그에 따라 카드를 보여주는 함수 searchPlay 함수
@@ -92,41 +83,23 @@ const searchPlay = () => {
       // 모든 영화 카드
       const movieCards = document.querySelectorAll('.movieCard');
       
+
+      /*
+        1. 사용자에게 가상으로 검색어로 입력받는다.
+        2. includes(https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/includes) 메서드를 이용
+             사용자가 검색한 문자열인 searchInput이  영화 카드의 제목인 mv_Title에 포함되어 있는지 확인하는 과정을 하나로본다.
+             이 과정이  한번이 아닌 여러번 나오므로 반복문을 실행한다. 
+      */
       movieCards.forEach(movieCard => {
 
-         // 영화카드내의 영화 이름 저장
-         const mv_Title = movieCard.querySelector('.mvTitle').innerText
+        
 
-
-        /*
-          예를 들어  사용자가 검색했다고 하자  
-
-          그리고   모든 영화카드가 있다고 하자 
-
-          여기에서  영화카드의 영화이름에 사용자가 검색어가 포함되어있다면 
-          
-           display = block  (보여줘)
-        */
-
-        /**
-         *  mdn 공식문서에 따르면 include메서드는  대소문자 구분 검색을 수행하며
-         * 
-         *  주어진 문자열이내에서 발견된다면 -> true 
-         * 
-         *  발견되지 않는다면 ->  false
-         */
-
-         // if문은 주어진 조건(mv_Title.includes(searchInp))이  참(true)라면
-         
-
-        if(mv_Title.includes(searchInput))
-        {
-            movieCard.style.display = 'block';
-
-        }else {
-            movieCard.style.display = 'none';   
-      
-        } 
+        // 영화카드내의 영화 이름 저장
+        const mv_Title = document.getElementById('mv__title').innerText;
+       
+        // 사용자가 검색한 문자열인 searchInput이  영화 카드의 제목인 mv_Title에 포함되어 있는지 확인하는 과정 ( 112 ~ 119 )
+        mv_Title.includes(searchInput) ?  movieCard.style.display = 'block' :  movieCard.style.display = 'none' ;
+     
       });
     }
 
