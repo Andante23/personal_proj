@@ -1,5 +1,8 @@
-//
+
 'use strict';
+
+import config from "./src/apikey.js";
+
 
 // options는 tmdb api 명세의 기본 틀에 존재하기에 필요합니다. 
 const options = {
@@ -13,7 +16,7 @@ const options = {
 
 
 // API는 변함이 없으므로 상수로 고정
-const apiKey = config.tmdbApi;
+const {tmdbApi} = config ;
 
 // movieIds는  response 콘솔을 찍어서 나온 id로 함   
 const movieIds = [2,5,6,8,11,13,15,17,21];
@@ -26,9 +29,8 @@ movieIds.forEach(movieId => {
     movieCardBlock(options);
 
     // 영화카드를 보이게 하는  movieCardBlock 함수 
-    function movieCardBlock(options)
-    {
-        const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`;
+    function movieCardBlock(options){
+        const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${tmdbApi}`;
         
         // options는 tmdbAPI 명세에서 요구하기에 가져왔습니다. 
         fetch(url, options)
@@ -67,13 +69,7 @@ movieIds.forEach(movieId => {
 
 
 
-       
-
-    
-        })
-        
-        // 크롬 브라우저 개발자 도구 console 창에 에러 출력 
-        .catch(
+    }).catch(  // 크롬 브라우저 개발자 도구 console 창에 에러 출력 
             err => console.error(err)   
             );
     }
@@ -92,7 +88,7 @@ movieIds.forEach(movieId => {
 const searchPlay = () => {
 
         // 사용자로부터 입력받은 검색어 값(value)에 접근
-      const searchInp = document.getElementById('movieSearch').value;
+      const searchInput = document.getElementById('movieSearch').value;
       // 모든 영화 카드
       const movieCards = document.querySelectorAll('.movieCard');
       
@@ -123,7 +119,7 @@ const searchPlay = () => {
          // if문은 주어진 조건(mv_Title.includes(searchInp))이  참(true)라면
          
 
-        if(mv_Title.includes(searchInp))
+        if(mv_Title.includes(searchInput))
         {
             movieCard.style.display = 'block';
 
