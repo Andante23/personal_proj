@@ -1,7 +1,7 @@
 
 'use strict';
 
-import config from "./src/apikey.js";
+import config from "./src/config.js";
 
 
 // options는 tmdb api 명세의 기본 틀에 존재하기에 필요합니다. 
