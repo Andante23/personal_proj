@@ -1,44 +1,88 @@
-/* :root{} */
+ /* 코드 가저 일일히 수정하는 것을 줄일수 있습니다. 
+ 즉 , 한번에 수정이 용이하다는 것입니다. */
+ :root{
+
+    /* 테두리  파레트 */
+    --border-radius-px1 : 10px;
+    --border-radius-px2 : 20px;
+    --border-radius-px3 : 3px;
+ 
+
+    /* 색깔 파레트 */
+     --color-border:black;
+     --color-c1: gray;
+     --color-c2: white;
+     --color-back1 :gainsboro;
+     --color-back2 : black;
+     --color-c3:transparent;
+
+     /* 글자파레트  */
+     --all-font-family: 'Noto Sans KR', sans-serif;
+     --font-weight: bold;
+     --font-size-won:10px;
+     --font-size-two:14px;
+     --font-size-tree:11px;
+
+
+     /* 가로 , 높이 파레트 */
+     
+     /* width */
+     --width-px1:275px;
+     --width-px2:220px;
+     --width-px3:500px;
+     --max-width-auto:auto;
+
+     /* height */
+     --height-px1:40px;
+     --height-px2:500px;
+     --height-px3:250px;
+
+    
+     
+    
+
+
+ } 
 
 
 
 /* 선택자를 사용하여  문서 모두에 영향을 끼치게 함 */
 * {    
-    font-family:'Noto Sans KR', sans-serif;
+    font-family: var(--all-font-family);
 }
 
 
 /*  movieRight(영화검색창) 전체 */
 .movieRight{
     margin :30px 0px 30px 1500px;
-    background-color: gainsboro;
-    border-radius: 10px;
-    width: 275px;
+    background-color: var(--color-back1);
+    border-radius: var(--border-radius-px1);
+    width: var(--width-px1);
 }
 
 /* movieSearchBar(영화검색바)  */
 .movieRight .movieSearchBar {
     outline: none;
-    width: 220px;
-    height: 40px;
-    font-size: 14px;  
+    width: var(--width-px2);
+    height: var(--height-px1);
+    font-size: var(--font-size-two);  
     border: none;
-    border-radius: 20px;
-    background-color: gainsboro;    
-    color:  gray;
+    border-radius: var(--border-radius-px2);
+    background-color: var(--color-back1) ;    
+    color:  var(--color-c1);
 }
 
 /* movieSearchbtn(영화검색버튼) */
 .movieRight .movieSearchbtn {
     margin-left: 15px;
-    color: white;
+    color: var(--color-c2);
     outline: none;
     border: none;
-    background-color: transparent;
+    background-color: var(--color-c3);
 }
 
 .movieRight .movieSearchbtn:hover {
-     color: gray;
+     color: var(--color-c1);
      cursor: pointer;
 }
 
@@ -57,7 +101,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    font-weight: bold;
+    font-weight: var(--font-weight);
 }
 /* movieCard(영화카드) */
 #movieListView > .movieCard {
@@ -65,33 +109,33 @@
     align-items: center;
 
     box-shadow: 2px 2px 2px 2px gray;
-    border-radius: 10px;
+    border-radius: var(--border-radius-px1);
     margin: 30px;
 
-   width: 500px;
-   height: 500px;    
+   width: var(--width-px3);
+   height: var(--height-px2);    
 }
 
 /* mvImg(영화이미지) */
 #movieListView > .movieCard  > .mvImg {
-    border-radius: 3px;
+    border-radius: var(--border-radius-px3);
     width: 500px;
-    height: 250px;
+    height: var(--height-px3);
 }
 
 /* mvRate(영화평점) , mvTitle(영화제묵) 을 모두 포함하는 movieCarte 클래스 선택자 */
 #movieListView > .movieCard > .movieCarte {
     padding-left: 10px;
-    font-size: 11px;
+    font-size: var(--font-size-tree);
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    border-color: black;
-    background-color: black;
-    color: white;
+    border-color: var(--color-back2);
+    background-color: var(--color-back2);
+    color: var(--color-c2);
 
-    max-width: auto;
+    max-width: var(--max-width-auto);
     margin: 0px;
 }
 
@@ -110,7 +154,7 @@
 
 /*mvParam(영화내용) 설정*/
 #movieListView > .movieCard > .mvParam {
-    font-size: 11px;
+    font-size: var(--font-size-tree);
     padding-left:4px;
 }
 
