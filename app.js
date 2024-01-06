@@ -33,9 +33,8 @@ const options = {
  * @param {요구명세서에서 요구했던 URL } TopUrl 
  */
 function topRating(options   ,param,TopUrl) {
-  // fetch를 통해서 top_rated와 관련된 데이터를 받아옵시다. 
-// TopUrl없으면   top_rated 영화 데이터 가져오다 fetch가 에러호출합니다.
-fetch(TopUrl, options)
+
+fetch(TopUrl, options) // fetch를 통해서 top_rated와 관련된 데이터를 받아옵시다. 
 .then(response => response.json())
 .then(data => {     // data에 파싱한 json 데이터를 저장합시다.
 
@@ -43,19 +42,12 @@ fetch(TopUrl, options)
     const movieIds = data.results;
 
 
-     console.log(); // json 형식으로 변환된 top_rated 데이터를 콘솔에  퉤하고 뺃어줍니다. 배열이더라고여  
+    // console.log(movieIds); json 형식으로 변환된 top_rated 데이터를 콘솔에  퉤하고 뺃어줍니다. 배열이더라고여  
     // console.log(typeof(movieIds));  자료형이 object입니다.  참고로  array입니다. 
     
     //  배열이기에 forEach가 가능한 것입니다. 
     //   html에  카드를 붙이는 과정을  forEach를 통해서 반복한다. 라는 과정입니다.
     // 영화목록을 보여주는데  1,2개보여주고 장땡이 아니지 않습니까 
-    
-
-    
-
-   
-   
-
       movieIds.forEach(movieId => {
       
         //  console.log(movieId); : movieIds의 요소를 movieId라하는데  잘 나왔는지 확인하는 것입니다. 
@@ -114,11 +106,14 @@ fetch(TopUrl, options)
 .catch(err => console.error(err));
 }
 
+// 카드를 클릭합니다.
+// 그러면  " 클릭한 영화의 ID: 000 "라고 경고창이 뜸니다. 
 function handleMovieCardClick(movieId) {
   window.alert(`클릭한 영화의 ID: ${movieId}`);
  }
 
-// topRating 함수 선언 
+ 
+// topRating 함수 실행
 topRating(options,tmdbApiKey,toprateUrl);
 
 
