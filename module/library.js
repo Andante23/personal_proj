@@ -23,7 +23,7 @@ const searchPlay = () => {
       }
     });
   };
-  
+
 
 export {tmdbApiKey , topRateUrl  , options}
 
@@ -31,3 +31,5 @@ export {tmdbApiKey , topRateUrl  , options}
 
 
 export default searchPlay ;
+
+
