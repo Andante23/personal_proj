@@ -13,12 +13,9 @@
     <meta name="description" content="환영합니다.단테가 선정한 영화를 소개해주는 사이트입니다.">
     <meta name="keywords" content="단테네 , 단테네 영화소개집">
     
-     <script type="module" src="app.js"></script>
-   
-     
-      
-     
-    <link rel="stylesheet" href="style.css">
+    <script type="module" src="app.js"></script>   
+    <link rel="stylesheet" href="src/style.css">
+     <link rel="stylesheet" href="src/stylemedia.css">
 
     <!-- 폰트어썸 (일부 아이콘은 유료지만 , 기본 제공은 무료 )  -->
     <script src="https://kit.fontawesome.com/f57cfcf36f.js" crossorigin="anonymous"></script>
@@ -49,11 +46,7 @@
 
     <!-- 제가 소개하는 영화들을 검색할 수 있는 검색창 movieSearch -->
     <div class="movieRight">
-       
-
-
         <input type="text" placeholder="영화제목을 입력해주세요" id="movieSearch" class="movieSearchBar">
-        
         <!-- 영화제목을 입력하고 검색버튼을 클릭하면  -->
 
         <button class="movieSearchbtn"  id="searchBtn"  >
@@ -62,19 +55,19 @@
         </button>
     </div>
     
-    <div class="movieLeft">
-        <button class="pleaseFive" id="please__Five">5개만</button>
-        <button class="please">3개만</button>
-    </div>
+  
 
 
 
-    <!-- 검색하면  보이는 화면단 movieListView -->
+    <!-- 
+         검색하면  보이는 화면단 movieListView 생각해봅시다. 
+         어떤 HTML 페이지가 카드 여러개를  DOM이용하지 않고 생으로 하면 좋아 할까요 
+         => 두둘겨 맞기 딱 좋습니다. 
+    -->
 
     <div id="movieListView" class="movieMiddle" >    
      <!-- 
-        javascript DOM 을 통해  영화 소개 카드 레이아웃(HTML) 을 가져와서 
-        뿌려준다.
+        javascript DOM 을 통해  영화 소개 카드 레이아웃(HTML) 을 가져와서 뿌려준다.
       -->
     </div>
 

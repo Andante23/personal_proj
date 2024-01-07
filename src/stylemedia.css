@@ -1,0 +1,56 @@
+
+@import url('./style.css');
+
+/* 
+   모바일 미디어 쿼리 ( 테스트 케이스입니다.)
+*/
+@media screen and (max-width: 500px){
+	
+
+    #movieTop > .intro {
+        font-size: 25px;
+        margin-left: 20px;
+    }
+    
+    .movieRight {
+        margin-left:190px ;
+        display: flex;
+    }
+
+    #movieListView{
+        display: flex;
+        flex-direction: column;
+    }
+
+     
+    #movieListView > .movieCard {
+        width: 270px;
+        height: 320px;
+
+        margin-left: 80px;
+    }
+
+
+   #movieListView > .movieCard > .mvImg
+   {
+       width: 270px;
+       height: 120px;
+       border-radius: 4px;
+   }
+
+   #movieListView > .movieCard > .mvParam
+   {
+       font-size: 11px;
+   }
+   
+
+    
+   #movieBottom > .mBottomleft > .mBottomleft__title
+   {
+    font-size: 20px;
+   }
+
+
+
+}
+
