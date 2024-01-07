@@ -51,9 +51,20 @@
     font-family: var(--all-font-family);
 }
 
+#movieTop > .intro {
+    text-align: center;
+}
+
+
+
+
+
+
+
 
 /*  movieRight(영화검색창) 전체 */
 .movieRight{
+    display: flex;
     margin :30px 0px 30px 1500px;
     background-color: var(--color-back1);
     border-radius: var(--border-radius-px1);

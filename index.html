@@ -13,8 +13,8 @@
     <meta name="description" content="환영합니다.단테가 선정한 영화를 소개해주는 사이트입니다.">
     <meta name="keywords" content="단테네 , 단테네 영화소개집">
     
-     <script defer src="app.js"></script>
-     <script src="apikey.js"></script>
+     <script type="module" src="app.js"></script>
+   
      
       
      
@@ -44,21 +44,28 @@
 
 
    
+   
 
 
     <!-- 제가 소개하는 영화들을 검색할 수 있는 검색창 movieSearch -->
     <div class="movieRight">
+       
+
+
         <input type="text" placeholder="영화제목을 입력해주세요" id="movieSearch" class="movieSearchBar">
         
         <!-- 영화제목을 입력하고 검색버튼을 클릭하면  -->
 
-        <button class="movieSearchbtn"  id="searchBtn" onclick="searchPlay()" >
+        <button class="movieSearchbtn"  id="searchBtn"  >
             <i class="fa-solid fa-magnifying-glass"></i>
         
         </button>
     </div>
     
-
+    <div class="movieLeft">
+        <button class="pleaseFive" id="please__Five">5개만</button>
+        <button class="please">3개만</button>
+    </div>
 
 
 
