@@ -1,107 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>단테네 영화소개집에 오신것을 환영합니다.</title>
-    
+
     <!-- 
         사이트 소개
         구글,네이버와 같은 검색엔진에서 내 사이트를 더 잘 발견할 수 있도록 
         검색엔진 최적화 사용하기 
     -->
-    <meta name="description" content="환영합니다.단테가 선정한 영화를 소개해주는 사이트입니다.">
-    <meta name="keywords" content="단테네 , 단테네 영화소개집">
-    
-    <script type="module" src="app.js"></script>   
-    <link rel="stylesheet" href="src/style.css">
-     <link rel="stylesheet" href="src/stylemedia.css">
+    <meta
+      name="description"
+      content="환영합니다.단테가 선정한 영화를 소개해주는 사이트입니다."
+    />
+    <meta name="keywords" content="단테네 , 단테네 영화소개집" />
+
+    <script type="module" src="app.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/stylemedia.css" />
 
     <!-- 폰트어썸 (일부 아이콘은 유료지만 , 기본 제공은 무료 )  -->
-    <script src="https://kit.fontawesome.com/f57cfcf36f.js" crossorigin="anonymous"></script>
-   
-     
+    <script
+      src="https://kit.fontawesome.com/f57cfcf36f.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- 구글폰트 14 ~ 16 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200&display=swap" rel="stylesheet">
- 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    
-
-</head>
-
-<body>
-
-
+  <body>
     <!-- 단테의 영화 소개 사이트 상단 movieTop -->
     <header id="movieTop">
-        <h1 class="intro">단테네 영화소개집</h1>
+      <h1 class="intro">단테네 영화소개집</h1>
     </header>
 
-
-   
-   
-
-
     <!-- 제가 소개하는 영화들을 검색할 수 있는 검색창 movieSearch -->
-    <div class="movieRight">
-        <input type="text" placeholder="영화제목을 입력해주세요" id="movieSearch" class="movieSearchBar">
-        <!-- 영화제목을 입력하고 검색버튼을 클릭하면  -->
-
-        <button class="movieSearchbtn"  id="searchBtn"  >
-            <i class="fa-solid fa-magnifying-glass"></i>
-        
-        </button>
+    <div class="movieSearchView">
+      <input
+        type="text"
+        placeholder="영화제목을 입력해주세요"
+        id="movieSearch"
+        class="movieSearchBar"
+      />
     </div>
-    
-  
 
+    <div id="movieNavBar">
+      <input
+        type="button"
+        value="밤"
+        class="DayNight"
+        id="movieDayNightButton"
+      />
+    </div>
 
-
-    <!-- 
-         검색하면  보이는 화면단 movieListView 생각해봅시다. 
-         어떤 HTML 페이지가 카드 여러개를  DOM이용하지 않고 생으로 하면 좋아 할까요 
-         => 두둘겨 맞기 딱 좋습니다. 
+    <!-- 여기에는 카드를 DOM으로 붙여줍시다. 
+         쌩으로 하다가 HTML에게  매 맞습니다.
     -->
-
-    <div id="movieListView" class="movieMiddle" >    
-     <!-- 
-        javascript DOM 을 통해  영화 소개 카드 레이아웃(HTML) 을 가져와서 뿌려준다.
-      -->
-    </div>
-
+    <div id="movieListView" class="movieMiddle"></div>
 
     <!-- 홈페이지 하단 -->
     <footer id="movieBottom">
-        <!-- 제목 -->
-        <div class="mBottomleft">
-            <h1 class="mBottomleft__title">
-                단테네 영화소개집
-            </h1>
-        </div>
+      <!-- 제목 -->
+      <div class="mBottomleft">
+        <h1 class="mBottomleft__title">단테네 영화소개집</h1>
+      </div>
 
+      <!-- 메뉴 -->
+      <ul class="mBottomright">
+        <!-- icon + 이메일 -->
+        <li class="mBottomright__list">
+          <i class="fa-regular fa-envelope"></i
+          ><small class="list__mail"> andante1104@naver.com </small>
+        </li>
 
-        <!-- 메뉴 -->
-        <ul class="mBottomright">
-            
-            <!-- icon + 이메일 -->
-            <li class="mBottomright__list">
-                <i class="fa-regular fa-envelope"></i><small class="list__mail">
-                    andante1104@naver.com
-                </small>
-            </li>
-
-            <!-- icon + 주소 -->
-            <li class="mBottomright__list">
-                <i class="fa-solid fa-location-dot"></i> <small class="list__addr">
-                     경기도 시흥시 목감초등길4 
-                </small>
-            </li>
-        </ul>
-
-
+        <!-- icon + 주소 -->
+        <li class="mBottomright__list">
+          <i class="fa-solid fa-location-dot"></i>
+          <small class="list__addr"> 경기도 시흥시 목감초등길4 </small>
+        </li>
+      </ul>
     </footer>
-
-</body>
+  </body>
 </html>

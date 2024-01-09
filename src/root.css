@@ -1,86 +1,61 @@
- /* 코드 가저 일일히 수정하는 것을 줄일수 있습니다. 
- 즉 , 한번에 수정이 용이하다는 것입니다. */
- :root{
-    /* 테두리  파레트 */
-    --border-radius-px1 : 10px;
-    --border-radius-px2 : 20px;
-    --border-radius-px3 : 3px;
- 
+:root {
+  /* 테두리 파레트 */
+  --border-radius-small: 3px;
+  --border-radius-medium: 10px;
+  --border-radius-large: 20px;
 
-    /* 색깔 파레트 */
-     --color-border:black;
-     --color-c1: gray;
-     --color-c2: white;
-     --color-back1 :gainsboro;
-     --color-back2 : black;
-     --color-c3:transparent;
+  /* 색깔 파레트 */
+  --color-border: black;
+  --color-text-primary: gray;
+  --color-text-secondary: white;
+  --color-background-light: gainsboro;
+  --color-background-dark: black;
+  --color-transparent: transparent;
 
-     /* 글자파레트  */
-     --all-font-family: 'Noto Sans KR', sans-serif;
-     --font-weight: bold;
-     --font-size-won:10px;
-     --font-size-two:14px;
-     --font-size-tree:11px;
+  /* 글자파레트 */
+  --font-family: "Noto Sans KR", sans-serif;
+  --font-weight-bold: bold;
+  --font-size-small: 10px;
+  --font-size-medium: 14px;
+  --font-size-large: 11px;
 
+  /* 가로, 높이 파레트 */
+  /* width */
+  --width-small: 275px;
+  --width-medium: 220px;
+  --width-large: 500px;
+  --max-width-auto: auto;
 
-     /* 가로 , 높이 파레트 */
-     
-     /* width */
-     --width-px1:275px;
-     --width-px2:220px;
-     --width-px3:500px;
-     --max-width-auto:auto;
+  /* height */
+  --height-small: 40px;
+  --height-medium: 500px;
+  --height-large: 250px;
 
-     /* height */
-     --height-px1:40px;
-     --height-px2:500px;
-     --height-px3:250px;
+  /* 여백 픽셀 파레트 */
+  /* margin */
+  --margin-none: 0;
+  --margin-large: 30px 0 30px 1500px;
+  --margin-medium: 0 0 0 15px;
+  --margin-small: 30px;
 
-    
-     /* 여백 픽셀 파레트  */
+  --margin-part1: 15px;
 
+  /* padding */
+  --padding-medium: 0 0 0 30px;
+  --padding-small: 3px;
+  --padding-right: 10px;
 
-     /* margin */
-     --margin-all0 : 0px 0px 0px 0px;
-     --margin-all1 : 30px 0px 30px 1500px;
-    --margin-all2 : 0px 0px 0px 15px;
-    --margin-all3 : 30px 30px 30px 30px;
-    
-
-    --margin-part1 : 15px;
-
-    
-
-     /* padding  */
-    --padding-all1 : 0px 0px 0px 30px;
-    --padding-all2 : 3px 3px 3px 3px;
-    --padding-right : 10px;
-
-
-  
-
-
-
-     /* 기타 옵션 파레트 */
-    --etc-display2 : grid;
-    --etc-grid-template : 1fr 1fr 1fr;
-    --etc-grid-gap : 10px;
-     
-     --etc-display1 : flex;
-     --etc-center :center;
-     --etc-outline : none;
-     --etc-border-value : none;
-     --etc-cursor : pointer;
-     --etc-justify-content : space-between ;
-     --etc-list-style-type:none;
-     --etc-box-shadow : 2px 2px 2px 2px gray;
-
- } 
-
-
- /* 선택자를 사용하여  문서 모두에 영향을 끼치게 함 */
-* {    
-    font-family: var(--all-font-family);
+  /* 기타 옵션 파레트 */
+  --display-grid: grid;
+  --grid-template-columns: 1fr 1fr 1fr;
+  --grid-gap: 10px;
+  --border-style: 1px solid black;
+  --display-flex: flex;
+  --align-center: center;
+  --outline-none: none;
+  --border-value-none: none;
+  --cursor-pointer: pointer;
+  --justify-space-between: space-between;
+  --list-style-none: none;
+  --box-shadow: 2px 2px 2px 2px gray;
 }
-
-

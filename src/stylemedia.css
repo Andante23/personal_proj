@@ -1,56 +1,127 @@
+@import url("./style.css");
 
-@import url('./style.css');
+/* Dimensions : Galaxy S8 */
+@media screen and (max-width: 360px) {
+  /* 영화 제목 */
+  #movieTop > .intro {
+    font-size: 25px;
+    padding-left: 80px;
+  }
 
-/* 
-   모바일 미디어 쿼리 ( 테스트 케이스입니다.)
-*/
-@media screen and (max-width: 500px){
-	
+  /* 영화 검색뷰 */
+  .movieSearchView {
+    margin: 0px;
+  }
 
-    #movieTop > .intro {
-        font-size: 25px;
-        margin-left: 20px;
-    }
-    
-    .movieRight {
-        margin-left:190px ;
-        display: flex;
-    }
+  .movieSearchView > .movieSearchBar {
+    width: 280px;
+    margin: 5px;
+  }
 
-    #movieListView{
-        display: flex;
-        flex-direction: column;
-    }
+  /* 영화 리스트 뷰 */
+  #movieListView {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+  }
 
-     
-    #movieListView > .movieCard {
-        width: 270px;
-        height: 320px;
+  #movieListView > .movieCard {
+    width: 260px;
+    height: 320px;
+    margin-left: -10px;
+  }
 
-        margin-left: 80px;
-    }
+  #movieListView > .movieCard > .mvImg {
+    width: 260px;
+    height: 120px;
+    border-radius: 5px;
+  }
 
+  #movieListView > .movieCard > .mvParam {
+    font-size: 11px;
+  }
 
-   #movieListView > .movieCard > .mvImg
-   {
-       width: 270px;
-       height: 120px;
-       border-radius: 4px;
-   }
+  /* 포함되지 않을씨 보여줄 페이지 */
+  #movieListView > .searchResultView {
+    margin-left: -30px;
+    margin-bottom: 40px;
+    width: 330px;
+    height: 240px;
+  }
 
-   #movieListView > .movieCard > .mvParam
-   {
-       font-size: 11px;
-   }
-   
+  #movieListView > .searchResultView > .searchResult {
+    padding-left: 200px;
+    margin-top: -80px;
+    font-size: 12px;
+  }
 
-    
-   #movieBottom > .mBottomleft > .mBottomleft__title
-   {
-    font-size: 20px;
-   }
+  /* 영화 홈페이지 하단  */
+  #movieBottom {
+    font-size: 8px;
+  }
 
+  #movieBottom > .mBottomleft > .mBottomleft__title {
+    padding-bottom: 10px;
+  }
 
-
+  #movieBottom > .mBottomright > .mBottomright__list {
+    padding-right: 30px;
+  }
 }
 
+/* PC에서  width값을  500픽셀로 부여했을때 */
+@media screen and (max-width: 500px) {
+  #movieTop > .intro {
+    margin-right: 300px;
+    font-size: 19px;
+  }
+
+  /* 검색 창 */
+  .movieSearchView {
+    margin-left: 2%;
+  }
+
+  .movieSearchView > .movieSearchBar {
+    margin-left: 100px;
+    border-radius: 5px;
+    border: 2px solid black;
+    width: 320px;
+    background-color: aliceblue;
+  }
+
+  /* 영화 카드 뷰 */
+  #movieListView {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 영화 카드 기타 설정 ( 105 - 112 ) */
+  #movieListView > .movieCard {
+    width: 350px;
+  }
+
+  #movieListView > .movieCard > .mvImg {
+    width: 350px;
+  }
+
+  /* 결과가 없을때 (115 - 126) */
+  #movieListView > .searchResultView {
+    margin-left: -30px;
+    margin-bottom: 40px;
+    width: 480px;
+    height: 240px;
+  }
+
+  #movieListView > .searchResultView > .searchResult {
+    padding-left: 200px;
+    margin-top: -80px;
+    font-size: 12px;
+  }
+
+  /* 영화 페이지 하단 ( 129-132) */
+  #movieBottom > .mBottomleft > .mBottomleft__title {
+    font-size: 22px;
+    padding-left: 7px;
+  }
+}
