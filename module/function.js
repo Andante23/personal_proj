@@ -51,6 +51,10 @@ const searchPlay = () => {
   }
 };
 
+/**
+ * 낮밤 배경바뀌는 함수.
+ * searchPlay함수의 스타일 일부 유용하게 씀
+ */
 const movieDayNightBackground = () => {
   const dayNightButton = document.getElementById("movieDayNightButton");
   const movieBodyGround = document.body;
